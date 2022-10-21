@@ -28,60 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.txtSetUpUserAcc = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSetUpUserAcc
             // 
-            this.txtSetUpUserAcc.AutoSize = true;
-            this.txtSetUpUserAcc.Location = new System.Drawing.Point(5, 43);
-            this.txtSetUpUserAcc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            resources.ApplyResources(this.txtSetUpUserAcc, "txtSetUpUserAcc");
+            this.txtSetUpUserAcc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSetUpUserAcc.ForeColor = System.Drawing.Color.Blue;
             this.txtSetUpUserAcc.Name = "txtSetUpUserAcc";
-            this.txtSetUpUserAcc.Size = new System.Drawing.Size(179, 20);
-            this.txtSetUpUserAcc.TabIndex = 0;
-            this.txtSetUpUserAcc.Text = "Set Up User Account";
             this.txtSetUpUserAcc.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtLogin
             // 
-            this.txtLogin.AutoSize = true;
-            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.ForeColor = System.Drawing.Color.Lavender;
-            this.txtLogin.Location = new System.Drawing.Point(31, 108);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            resources.ApplyResources(this.txtLogin, "txtLogin");
+            this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLogin.ForeColor = System.Drawing.Color.Blue;
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(78, 29);
-            this.txtLogin.TabIndex = 1;
-            this.txtLogin.Text = "Login";
             this.txtLogin.Click += new System.EventHandler(this.txtLogin_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSetUpUserAcc);
             this.panel1.Controls.Add(this.txtLogin);
             this.panel1.ForeColor = System.Drawing.Color.Lavender;
-            this.panel1.Location = new System.Drawing.Point(25, 81);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 208);
-            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Name = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1193, 692);
+            this.BackColor = System.Drawing.Color.Red;
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Navy;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Welcome";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -94,6 +100,8 @@
         private System.Windows.Forms.Label txtSetUpUserAcc;
         private System.Windows.Forms.Label txtLogin;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
